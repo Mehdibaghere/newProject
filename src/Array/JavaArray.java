@@ -1,5 +1,8 @@
 package Array;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 class ArrayJava {
@@ -76,68 +79,68 @@ class ArrayJava {
 //        return false;
 //
 ////////////////////////////////////////////////////////////
-//        Scanner reader = new Scanner(System.in);
-//        int[] a = new int[5];
-//        a[0] = reader.nextInt();
-//        a[1] = reader.nextInt();
-//        a[2] = reader.nextInt();
-//        a[3] = reader.nextInt();
-//        a[4] = reader.nextInt();
-//
-//        System.out.println(lookForMin(a));
-//        System.out.println(lookForMax(a));
-//        System.out.println(Arrays.toString(shrinkArrayV2(a)));
-//
-//    }
-//    private static int[] shrinkArray(int[] bigArray) {
-//        final int[] result = new int[3];
-//        final int max = lookForMax(bigArray);
-//        final int min = lookForMin(bigArray);
-//
-//        int resultIndex = 0;
-//        for (int bigArrayIndex = 0; bigArrayIndex < bigArray.length; bigArrayIndex++) {
-//            final int bigArrayValue = bigArray[bigArrayIndex];
-//            if (bigArrayValue != min && bigArrayValue != max) {
-//                result[resultIndex++] = bigArrayValue;
-//            }
-//        }
-//
-//        return result;
-//    }
-//
-//    private static Integer[] shrinkArrayV2(int[] bigArray) {
-//        final int max = lookForMax(bigArray);
-//        final int min = lookForMin(bigArray);
-//        final List<Integer> resultList = new ArrayList<>();
-//
-//        for (int bigArrayIndex = 0; bigArrayIndex < bigArray.length; bigArrayIndex++) {
-//            final int bigArrayValue = bigArray[bigArrayIndex];
-//            if (bigArrayValue != min && bigArrayValue != max) {
-//
-//                resultList.add(bigArrayValue);
-//
-//            }
-//        }
-//
-//        return resultList.toArray(new Integer[3]);
-//    }
-//
-//    private static int lookForMax(int[] bigArray) {
-//        int bignumber = bigArray[0];
-//
-//        for (int i = 0; i <= 4; i++) {
-//            if (bigArray[i] > bignumber) bignumber = bigArray[i];
-//        }
-//        return bignumber;
-//    }
-//
-//    private static int lookForMin(int[] bigArray) {
-//        int smalnumber = bigArray[0];
-//
-//        for (int i = 0; i <= 4; i++) {
-//            if (bigArray[i] < smalnumber) smalnumber = bigArray[i];
-//        }
-//        return smalnumber;
+        Scanner reader = new Scanner(System.in);
+        int[] a = new int[5];
+        a[0] = reader.nextInt();
+        a[1] = reader.nextInt();
+        a[2] = reader.nextInt();
+        a[3] = reader.nextInt();
+        a[4] = reader.nextInt();
+
+        System.out.println(lookForMin(a));
+        System.out.println(lookForMax(a));
+        System.out.println(Arrays.toString(shrinkArrayV2(a)));
+
+    }
+    private static int[] shrinkArray(int[] bigArray) {
+        final int[] result = new int[3];
+        final int max = lookForMax(bigArray);
+        final int min = lookForMin(bigArray);
+
+        int resultIndex = 0;
+        for (int bigArrayIndex = 0; bigArrayIndex < bigArray.length; bigArrayIndex++) {
+            final int bigArrayValue = bigArray[bigArrayIndex];
+            if (bigArrayValue != min && bigArrayValue != max) {
+                result[resultIndex++] = bigArrayValue;
+            }
+        }
+
+        return result;
+    }
+
+    private static Integer[] shrinkArrayV2(int[] bigArray) {
+        final int max = lookForMax(bigArray);
+        final int min = lookForMin(bigArray);
+        final List<Integer> resultList = new ArrayList<>();
+
+        for (int bigArrayIndex = 0; bigArrayIndex < bigArray.length; bigArrayIndex++) {
+            final int bigArrayValue = bigArray[bigArrayIndex];
+            if (bigArrayValue != min && bigArrayValue != max) {
+
+                resultList.add(bigArrayValue);
+
+            }
+        }
+
+        return resultList.toArray(new Integer[3]);
+    }
+
+    private static int lookForMax(int[] bigArray) {
+        int bignumber = bigArray[0];
+
+        for (int i = 0; i <= 4; i++) {
+            if (bigArray[i] > bignumber) bignumber = bigArray[i];
+        }
+        return bignumber;
+    }
+
+    private static int lookForMin(int[] bigArray) {
+        int smalnumber = bigArray[0];
+
+        for (int i = 0; i <= 4; i++) {
+            if (bigArray[i] < smalnumber) smalnumber = bigArray[i];
+        }
+        return smalnumber;
 ////////////////////////////////////////////////////////////////////////////
 //
 //        int[] array = {5, 8, 3, 12, 9};
@@ -154,19 +157,27 @@ class ArrayJava {
 //            System.out.println(array[i]);
 //        }
 ////////////////////////////////////////////////////////
-        Scanner Array = new Scanner(System.in);
-        int[] array = new int[5];
-        for (int i = 0; i < array.length - 1; i--) {
-            for (int j = 0; j < array.length - 1 - i; j++) {
-                if (array[j] > array[j + 1]) {
-                    int temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                }
-            }
-        }
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
+//        Scanner reader = new Scanner(System.in);
+//        int[] array = new int[5];
+//        array[0] = reader.nextInt();
+//        array[1] = reader.nextInt();
+//        array[2] = reader.nextInt();
+//        array[3] = reader.nextInt();
+//        array[4] = reader.nextInt();
+//        for (int i = 0; i < array.length - 1; i++) {
+//            for (int j = 0; j < array.length - 1 - i; j++) {
+//                if (array[j] > array[j + 1]) {
+//                    int temp = array[j];
+//                    array[j] = array[j + 1];
+//                    array[j + 1] = temp;
+//                }
+//            }
+//        }
+//        for (int i = 0; i < array.length; i++) {
+//            System.out.print(array[i]);
+//            if (i < array.length - 1) {
+//                System.out.print(", ");
+//            }
+//        }
     }
 }
