@@ -8,6 +8,8 @@ import java.util.Scanner;
 class ArrayJava {
 
 
+    public static final int ARRAY_SIZE = 5;
+
     public static void main(String[] args) {
 //        int[] a = new int[5];
 //        a[0] = 5;
@@ -80,7 +82,7 @@ class ArrayJava {
 //
 ////////////////////////////////////////////////////////////
         Scanner reader = new Scanner(System.in);
-        int[] a = new int[5];
+        int[] a = new int[ARRAY_SIZE];
         a[0] = reader.nextInt();
         a[1] = reader.nextInt();
         a[2] = reader.nextInt();
